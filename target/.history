@@ -1,0 +1,10 @@
+eclipsify
+compile
+run
+compile
+play
+compile
+run
+git push heroku master
+heroku login
+heroku
