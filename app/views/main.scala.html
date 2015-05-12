@@ -1,4 +1,4 @@
-@(content: Html)
+@(nav: String = "")(content: Html)
 
 <!DOCTYPE html>
 <html>
@@ -16,6 +16,37 @@
                 </a>
             </h1>
         </header>
+        
+        <div class="topbar">
+            <div class="fill">
+                <div class="container" dir="rtl">
+                    <a class="brand" href="@routes.Application.index()">Forms</a>
+                    <ul class="nav">
+                        <li class="@("active".when(nav == ""))">
+                            <a href="@routes.Application.index()">صفحه اصلی</a>
+                        </li >
+                        <li class="@("active".when(nav == "sale"))">
+                            <a href="@routes.Application.edit(1)">خرید ساز</a>
+                        </li >
+                        <li >
+                            <a href="@routes.Application.index()">فروش ساز</a>
+                        </li>
+                        <li >
+                            <a href="@routes.Application.index()">آموزش</a>
+                        </li>
+                        <li >
+                            <a href="@routes.Application.index()">اخبار</a>
+                        </li>
+                        <li >
+                            <a href="@routes.Application.index()">درباره ما</a>
+                        </li>
+                        <li >
+                            <a href="@routes.Application.index()">تماس با ما</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         
         <section id="main">
             @content

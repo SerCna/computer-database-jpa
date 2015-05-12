@@ -8,3 +8,10 @@ run
 git push heroku master
 heroku login
 heroku
+dependencies
+reload
+run
+reload
+run
+exit
+run
